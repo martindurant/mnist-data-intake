@@ -1,0 +1,19 @@
+sources:
+  mnist:
+    description: "MNIST digit images and labels"
+    driver: intake_mnist.plugin.MNISTImagesPlugin
+    args:
+      part: "{{ train_or_test }}"
+    parameters: # User defined parameters
+      train_or_test:
+        description: Dataset to choose
+        type: str
+        default: "train"
+        allowed: ["train", "test"]
+    metadata:
+      origin: 'http://yann.lecun.com/exdb/mnist/'
+    cache:
+      - type: compressed
+        argkey: part
+        regex: 'yann.lecun.com/exdb/mnist'
+        decomp: gz

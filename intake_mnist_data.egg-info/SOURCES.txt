@@ -1,0 +1,12 @@
+MANIFEST.in
+README.rst
+./conda/meta.yaml
+./intake_mnist/cat.yaml
+intake_mnist/__init__.py
+intake_mnist/plugin.py
+intake_mnist_data.egg-info/PKG-INFO
+intake_mnist_data.egg-info/SOURCES.txt
+intake_mnist_data.egg-info/dependency_links.txt
+intake_mnist_data.egg-info/not-zip-safe
+intake_mnist_data.egg-info/requires.txt
+intake_mnist_data.egg-info/top_level.txt

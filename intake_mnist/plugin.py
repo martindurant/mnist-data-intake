@@ -31,10 +31,10 @@ class MNISTImagesPlugin(DataSource):
         the attributes directly.
         """
         super(MNISTImagesPlugin, self).__init__(metadata=metadata)
-        files = {'train': ['t10k-labels-idx1-ubyte.gz',
-                           't10k-images-idx3-ubyte.gz'],
-                 'test': ['train-labels-idx1-ubyte.gz',
-                          'train-images-idx3-ubyte.gz']}
+        files = {'train': ['train-labels-idx1-ubyte.gz',
+                           'train-images-idx3-ubyte.gz'],
+                 'test': ['t10k-labels-idx1-ubyte.gz',
+                          't10k-images-idx3-ubyte.gz']}
         self.lfile, self.ifile = [self.datasets_url + f for f in files[part]]
         self.labels = None
         self.images = None

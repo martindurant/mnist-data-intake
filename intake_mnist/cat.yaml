@@ -1,12 +1,16 @@
 sources:
   mnist:
-    description: "MNIST digit images and labels"
+    description: |
+      MNIST digit images and labels.
+      Select training or test datasets, which will be decompressed and cached
+      locally. The labels and images are selectable as partitions, each is
+      returned as an array.
     driver: intake_mnist.plugin.MNISTImagesPlugin
     args:
       part: "{{ train_or_test }}"
     parameters: # User defined parameters
       train_or_test:
-        description: Dataset to choose
+        description: "Data section to choose, [train|test]"
         type: str
         default: "train"
         allowed: ["train", "test"]
